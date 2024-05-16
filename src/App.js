@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { endPointPost } from './constants';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -8,7 +9,7 @@ const App = () => {
 
 
   const fetchPosts = () => {
-    fetch('http://localhost:5000/posts')
+    fetch(`${process.env.REACT_APP_API_URL}/${endPointPost}`)
       .then(response => response.json())
       .then(data => setPosts(data));
   };
@@ -38,7 +39,7 @@ const App = () => {
           setEditId(null);
         });
     } else {
-      fetch('http://localhost:5000/posts', {
+      fetch(`${process.env.REACT_APP_API_URL}/${endPointPost}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -61,7 +62,7 @@ const App = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/posts/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/${endPointPost}/${id}`, {
       method: 'DELETE'
     })
       .then(() => {
