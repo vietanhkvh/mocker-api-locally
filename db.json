@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "content": "This is the first post"
+    },
+    {
+      "title": "Another Post fgdgfdgdfg",
+      "content": "This is another post",
+      "id": "2"
+    },
+    {
+      "id": "6034",
+      "title": "aaaaacccc",
+      "content": "cccccc"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "text": "Great post!"
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "text": "Thanks for sharing!"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith"
+    }
+  ]
+}
